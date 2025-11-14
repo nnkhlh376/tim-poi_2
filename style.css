@@ -1,0 +1,105 @@
+body { 
+  margin: 0; 
+  padding: 0; 
+  font-family: serif;
+  background-color: #B8E1FF; 
+  color: #272525;
+}
+
+#map { 
+  height: 80vh; 
+  border: 2px solid #B8E1FF; 
+}
+
+#controls { 
+  padding: 18px; 
+  background-color: #ab90f5; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px; 
+  margin: 10px;
+}
+
+input, button { 
+  padding: 10px; 
+  font-size: 18px; 
+  font-family: serif; 
+  border-radius: 4px; 
+}
+
+input {
+  border: 2px solid #ddd; 
+  background-color: #fff; 
+  color: #272525; 
+}
+
+input:focus {
+  border-color: #0b73db; 
+  outline: none;
+}
+
+button { 
+  background-color: #eb76c2; 
+  color: rgb(246, 245, 245); 
+  border: none;
+  cursor: pointer; 
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #5e72d6; 
+}
+
+button:active {
+  background-color: #5e72d6; 
+}
+
+/* Weather info panel */
+.weather-info {
+  margin: 8px 10px;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color: #0b3b66;
+  font-size: 15px;
+  min-height: 40px;
+}
+.weather-info .title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.weather-info .row { display:flex; gap:12px; align-items:center; }
+.weather-info .temp { font-size: 20px; font-weight:700; color:#03396c; }
+.weather-info .small { font-size:13px; color:#35506a; }
+
+/* Close button for routing panel */
+.close-route-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.close-route-btn:hover {
+  background-color: #cc0000;
+}
+
+.leaflet-routing-container {
+  position: relative;
+}
+

@@ -1,7 +1,7 @@
 body { 
   margin: 0; 
   padding: 0; 
-  font-family: 'Fjalla One', sans-serif;
+  font-family: serif;
   background-color: #B8E1FF; 
   color: #272525;
 }
@@ -22,7 +22,7 @@ body {
 input, button { 
   padding: 10px; 
   font-size: 18px; 
-  font-family: 'Fjalla One', sans-serif; 
+  font-family: serif; 
   border-radius: 4px; 
 }
 
@@ -103,57 +103,3 @@ button:active {
   position: relative;
 }
 
-/* Google Translate styles */
-#google_translate_element {
-  display: inline-block;
-}
-
-#google_translate_element select {
-  padding: 8px;
-  font-size: 14px;
-  font-family: 'Fjalla One', sans-serif;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  background-color: white;
-  color: #272525;
-  cursor: pointer;
-}
-
-#google_translate_element select:hover {
-  border-color: #0b73db;
-}
-
-/* Hide Google Translate banner */
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-}
-
-/* Style for Google Translate widget */
-.goog-te-gadget {
-  font-family: 'Fjalla One', sans-serif !important;
-}
-
-.goog-te-gadget-simple {
-  background-color: white !important;
-  border: 2px solid #ddd !important;
-  border-radius: 4px !important;
-  padding: 6px 8px !important;
-  font-size: 14px !important;
-  font-family: 'Fjalla One', sans-serif !important;
-}
-
-.goog-te-gadget-simple:hover {
-  border-color: #0b73db !important;
-}
-
-.goog-te-gadget-icon {
-  display: none !important;
-}
-
-.goog-te-menu-value span {
-  color: #272525 !important;
-}

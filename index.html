@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Tìm POIs Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha512‑…" crossorigin="" />
   <!-- Leaflet Routing Machine CSS -->
@@ -11,8 +14,11 @@
 </head>
 <body>
   <div id="controls">
-    <input type="text" id="placeInput" placeholder="Nhập tên địa điểm tại Việt Nam…" size="40">
-    <button id="searchBtn">Tìm</button>
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;"></div>
+      <input type="text" id="placeInput" placeholder="Nhập tên địa điểm tại Việt Nam…" size="40">
+      <button id="searchBtn">Tìm</button>
+      <div id="google_translate_element" style="margin-left: auto;"></div>
+    </div>
   </div>
   <!-- Weather info panel (populated by app.js) -->
   <div id="weatherInfo" class="weather-info" aria-live="polite"></div>
@@ -23,5 +29,18 @@
   <!-- Leaflet Routing Machine JS -->
   <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
   <script src="app.js"></script>
+  <script type = "text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'vi', 
+          includedLanguages: 'en,vi,ja,ko,zh-CN,zh-TW,fr,de,es,th',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find POIs Vietnam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha512‑…" crossorigin="" />
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+  <div id="controls">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;"></div>
+      <input type="text" id="placeInput" placeholder="Enter location name in Vietnam…" size="40">
+      <button id="searchBtn">Search</button>
+    </div>
+  </div>
+  <!-- Weather info panel (populated by app.js) -->
+  <div id="weatherInfo" class="weather-info" aria-live="polite"></div>
+  <div id="map"></div>
+
+  <!-- Translation Popup -->
+  <div id="translationPopup" class="popup">
+    <div class="popup-content translation-popup">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Language Translation</h2>
+      
+      <div class="translation-container">
+        <!-- Left side: Source language -->
+        <div class="translation-column source-column">
+          <label for="sourceLang">Source Language:</label>
+          <select id="sourceLang">
+            <option value="en">English</option>
+            <option value="vi">Vietnamese</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+          </select>
+          <textarea id="textInput" placeholder="Enter text..."></textarea>
+        </div>
+
+        <!-- Arrow in the middle -->
+        <div class="translation-arrow" id="swapLanguagesBtn" title="Swap languages">⇄</div>
+
+        <!-- Right side: Target language -->
+        <div class="translation-column target-column">
+          <label for="targetLang">Target Language:</label>
+          <select id="targetLang">
+            <option value="vi">Vietnamese</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+          </select>
+          <div id="translationResult" class="translation-output"></div>
+        </div>
+      </div>
+
+      <button id="translateBtn" class="translate-btn-main">Translate</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha512‑…" crossorigin=""></script>
+  <!-- Leaflet Routing Machine JS -->
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
